@@ -29,51 +29,6 @@
         .btn-primary:hover {
             background-color: #79c0ff;
         }
-
-        /* Estilos específicos para la calculadora incrustada */
-        #calculator-app {
-            background-color: #0d1117;
-            border-radius: 0.75rem; /* rounded-xl */
-            padding: 1rem;
-            max-width: 320px;
-            margin: 0 auto;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        }
-        .calc-display {
-            background-color: #1f2937;
-            color: #fff;
-            padding: 0.5rem;
-            text-align: right;
-            border-radius: 0.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 2.25rem; /* text-4xl */
-            height: 3.5rem;
-            line-height: 1;
-        }
-        .calc-btn {
-            background-color: #374151;
-            color: #fff;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            font-size: 1.25rem;
-            transition: background-color 0.15s;
-        }
-        .calc-btn:active {
-            background-color: #4b5563;
-        }
-        .calc-btn.op-btn {
-            background-color: #58a6ff;
-            color: #0d1117;
-        }
-        .calc-btn.op-btn:active {
-            background-color: #79c0ff;
-        }
-        .calc-btn.clear-btn {
-            background-color: #ef4444;
-        }
-        .calc-btn.clear-btn:active {
-            background-color: #f87171;
-        }
     </style>
 </head>
 <body class="min-h-screen p-4 sm:p-8">
@@ -109,134 +64,13 @@
                 Scrum Master con experiencia en proyectos tecnológicos, incluyendo el gestión, análisis, migración e implementación de un sistema de créditos de vivienda, mantenimiento de un ERP de gestión y administración de contratos de agua y la gestión, análisis e implementación de un sistema intermediario entre NetSuite y bancos. Enfocado en la coordinación ágil de equipos, la optimización de procesos y la entrega de soluciones eficientes.
             </p>
         </section>
-        
-        <!-- NUEVA SECCIÓN: MINI TAREAS / DEMOS INTERACTIVOS -->
-        <section class="space-y-6">
-            <h2 class="text-3xl font-semibold text-white border-b border-primary pb-2">
-                Mini Tareas / Demos Interactivos
-            </h2>
-            
-            <!-- DEMO 1: CALCULADORA BÁSICA (CÓDIGO INCRUSTADO) -->
-            <div class="bg-card p-6 rounded-2xl border border-gray-700">
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                    Calculadora Básica (Demo Ejecutable)
-                </h3>
-                
-                <!-- Contenedor de la aplicación de la calculadora -->
-                <div id="calculator-app">
-                    <div id="display" class="calc-display">0</div>
-                    <div class="grid grid-cols-4 gap-2">
-                        <button class="calc-btn clear-btn col-span-2" onclick="clearDisplay()">C</button>
-                        <button class="calc-btn op-btn" onclick="appendOperator('/')">/</button>
-                        <button class="calc-btn op-btn" onclick="appendOperator('*')">*</button>
-                        
-                        <button class="calc-btn" onclick="appendNumber(7)">7</button>
-                        <button class="calc-btn" onclick="appendNumber(8)">8</button>
-                        <button class="calc-btn" onclick="appendNumber(9)">9</button>
-                        <button class="calc-btn op-btn" onclick="appendOperator('-')">-</button>
-                        
-                        <button class="calc-btn" onclick="appendNumber(4)">4</button>
-                        <button class="calc-btn" onclick="appendNumber(5)">5</button>
-                        <button class="calc-btn" onclick="appendNumber(6)">6</button>
-                        <button class="calc-btn op-btn" onclick="appendOperator('+')">+</button>
-                        
-                        <button class="calc-btn" onclick="appendNumber(1)">1</button>
-                        <button class="calc-btn" onclick="appendNumber(2)">2</button>
-                        <button class="calc-btn" onclick="appendNumber(3)">3</button>
-                        <button class="calc-btn op-btn row-span-2" onclick="calculateResult()">=</button>
-                        
-                        <button class="calc-btn col-span-2" onclick="appendNumber(0)">0</button>
-                        <button class="calc-btn" onclick="appendDecimal()">.</button>
-                    </div>
-                </div>
 
-            </div>
-            
-            <script>
-                // Lógica simple de la calculadora
-                let currentInput = '0';
-                let display = document.getElementById('display');
-                
-                function updateDisplay() {
-                    display.innerText = currentInput;
-                }
-
-                function clearDisplay() {
-                    currentInput = '0';
-                    updateDisplay();
-                }
-
-                function appendNumber(number) {
-                    if (currentInput === '0' && number !== 0) {
-                        currentInput = String(number);
-                    } else if (currentInput !== '0') {
-                        currentInput += String(number);
-                    }
-                    updateDisplay();
-                }
-
-                function appendOperator(operator) {
-                    // Evitar múltiples operadores al final
-                    const lastChar = currentInput.slice(-1);
-                    if (['+', '-', '*', '/'].includes(lastChar)) {
-                        currentInput = currentInput.slice(0, -1) + operator;
-                    } else {
-                        currentInput += operator;
-                    }
-                    updateDisplay();
-                }
-
-                function appendDecimal() {
-                    const lastSegment = currentInput.split(/[\+\-\*\/]/).pop();
-                    if (!lastSegment.includes('.')) {
-                        currentInput += '.';
-                    }
-                    updateDisplay();
-                }
-
-                function calculateResult() {
-                    try {
-                        // Usar eval() con cuidado, pero es el método más simple para este demo.
-                        let result = eval(currentInput.replace(/[^-()\d/*+.]/g, ''));
-                        currentInput = String(result);
-                    } catch (e) {
-                        currentInput = 'Error';
-                    }
-                    updateDisplay();
-                }
-                
-                // Inicializar la pantalla
-                updateDisplay();
-            </script>
-        </section>
-
-        <!-- SECCIÓN: EXPERIENCIA Y PROYECTOS (PROYECTOS EN GITHUB) -->
+        <!-- SECCIÓN: EXPERIENCIA Y PROYECTOS -->
         <section class="space-y-6">
             <h2 class="text-3xl font-semibold text-white">
-                Experiencia y Proyectos Destacados (GitHub)
+                Experiencia y Proyectos Destacados
             </h2>
 
-            <!-- NUEVO PROYECTO: Calculadora (solo enlace a GitHub) -->
-            <a href="https://github.com/AcostaDaniel12/calculadora" target="_blank" class="block">
-                <div class="bg-card p-6 rounded-2xl border border-gray-700 hover-lift transition">
-                    <h3 class="text-2xl font-bold text-primary mb-1 flex justify-between items-center">
-                        <span>Calculadora</span>
-                        <!-- Icono de enlace externo -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                    </h3>
-                    <p class="text-sm text-gray-400 mb-3">
-                        Repositorio de proyecto de Calculadora.
-                    </p>
-                    <p class="text-lg leading-relaxed text-gray-300">
-                        Este proyecto es un ejemplo de desarrollo web (HTML, CSS, JavaScript) básico, disponible para revisión en GitHub.
-                    </p>
-                </div>
-            </a>
-            
             <!-- Proyecto 1: Módulo interbancario para pagos -->
             <div class="bg-card p-6 rounded-2xl border border-gray-700 hover-lift transition">
                 <h3 class="text-2xl font-bold text-primary mb-1">
