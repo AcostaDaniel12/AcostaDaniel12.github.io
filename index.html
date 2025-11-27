@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Fernando Acosta Mendoza - Portafolio Profesional</title>
+    <!-- Carga de Tailwind CSS para un diseño rápido y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de color y fuente de Tailwind -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Estilo Oscuro */ 
+            background-color: #0d1117; 
+            color: #c9d1d9;
+        }
+        .text-primary { color: #58a6ff; } /* Color de acento azul */
+        .bg-card { background-color: #161b22; }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(88, 166, 255, 0.2), 0 4px 6px -2px rgba(88, 166, 255, 0.05);
+        }
+        .btn-primary {
+            background-color: #58a6ff;
+            color: #0d1117;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #79c0ff;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-12">
+
+        <!-- SECCIÓN DE ENCABEZADO Y BIENVENIDA -->
+        <header class="text-center pt-8 pb-4">
+            <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-2">
+                Daniel Fernando Acosta Mendoza
+            </h1>
+            <p class="text-xl text-primary font-medium">
+                Scrum Master | Gestor de Proyectos Tecnológicos
+            </p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <!-- Botón de GitHub con el enlace proporcionado -->
+                <a href="https://github.com/DanielAcostaM" target="_blank" class="btn-primary px-6 py-3 rounded-xl font-bold transition hover:scale-105">
+                    Mi GitHub
+                </a>
+                <!-- Botón de CV: Se utiliza el nombre del archivo subido y el atributo 'download' para forzar la descarga -->
+                <a href="Resume Daniel Fernando.docx.pdf" download="CV_Daniel_Fernando_Acosta_Mendoza.pdf" class="bg-card text-white border border-gray-600 px-6 py-3 rounded-xl font-bold transition hover:bg-gray-700 hover:border-primary hover:text-primary">
+                    Descargar CV (PDF)
+                </a>
+            </div>
+        </header>
+
+        <!-- SECCIÓN: RESUMEN PROFESIONAL (BIOGRAFÍA) -->
+        <section class="bg-card p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-700">
+            <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 text-white">
+                Resumen Profesional
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-300">
+                Scrum Master con experiencia en proyectos tecnológicos, incluyendo el gestión, análisis, migración e implementación de un sistema de créditos de vivienda, mantenimiento de un ERP de gestión y administración de contratos de agua y la gestión, análisis e implementación de un sistema intermediario entre NetSuite y bancos. Enfocado en la coordinación ágil de equipos, la optimización de procesos y la entrega de soluciones eficientes.
+            </p>
+        </section>
+
+        <!-- SECCIÓN: EXPERIENCIA Y PROYECTOS -->
+        <section class="space-y-6">
+            <h2 class="text-3xl font-semibold text-white">
+                Experiencia y Proyectos Destacados
+            </h2>
+
+            <!-- Proyecto 1: Módulo interbancario para pagos -->
+            <div class="bg-card p-6 rounded-2xl border border-gray-700 hover-lift transition">
+                <h3 class="text-2xl font-bold text-primary mb-1">
+                    Módulo interbancario para pagos
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    Gestor de Proyectos, Analista de Datos | Feb. 2024 - Actualidad
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>Realizar análisis de datos y documentación técnica de requerimientos.</li>
+                    <li>Coordiné equipos de desarrollo y di seguimiento a tareas técnicas.</li>
+                    <li>Gestioné cronogramas y recursos para garantizar entregas oportunas.</li>
+                    <li>Gestioné reuniones y participé en la definición puntual de las actividades del proyecto.</li>
+                    <li>Gestioné reuniones con bancos y proveedores para facilitar la comunicación.</li>
+                    <li>Realizar validaciones de procesos.</li>
+                    <li>Realizar manuales de usuario.</li>
+                </ul>
+            </div>
+
+            <!-- Proyecto 2: Sistema de administración y gestión de créditos de vivienda (SAGCV) -->
+            <div class="bg-card p-6 rounded-2xl border border-gray-700 hover-lift transition">
+                <h3 class="text-2xl font-bold text-primary mb-1">
+                    Sistema de administración y gestión de créditos de vivienda (SAGCV)
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    Gestor de Proyectos, Analista de Datos | Ago. 2022 - Actualidad
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>Diseñar y mantener bases de datos en PostgreSQL.</li>
+                    <li>Gestionar equipos de desarrollo y dar seguimiento a tareas técnicas.</li>
+                    <li>Migración de datos de un sistema de clipper y sql a la base de datos de PostgreSQL.</li>
+                    <li>Realizar un análisis para prevenir contratiempo, en migración de datos.</li>
+                    <li>Realizar documentos en jsreport utilizando HTML.</li>
+                    <li>Realizar validación de procesos y el cómo se guarda la información.</li>
+                    <li>Realizar manuales de usuarios y técnicos.</li>
+                </ul>
+            </div>
+
+            <!-- Proyecto 3: Clariti - Gestión de Proyectos -->
+            <div class="bg-card p-6 rounded-2xl border border-gray-700 hover-lift transition">
+                <h3 class="text-2xl font-bold text-primary mb-1">
+                    Clariti - Gestión de Proyectos, Documentador analista
+                </h3>
+                <p class="text-sm text-gray-400 mb-3">
+                    Ago. 2022 - Actualidad
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>Gestionar proyectos tecnológicos desde la planeación hasta la entrega e implementación.</li>
+                    <li>Recluté y gestioné equipos de trabajo multidisciplinarios.</li>
+                    <li>Supervisé cronogramas, entregables y reuniones con stakeholders.</li>
+                    <li>Capacité a usuarios finales en el uso de los sistemas implementados y realice manuales para el correcto uso.</li>
+                    <li>Documente procesos nuevos y antiguos para la facilitación de la capacitación de nuevos integrantes.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN: HABILIDADES -->
+        <section class="bg-card p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-700">
+            <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 text-white">
+                Habilidades Clave
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <!-- Habilidad 1: Gestión de Proyectos -->
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">SCRUM</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Planificación Estratégica</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Liderazgo de Equipos</span>
+                <!-- Habilidad 2: Análisis y Datos -->
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Análisis de Datos y Procesos</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">PostgreSQL</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Visualización de Datos</span>
+                <!-- Habilidad 3: Documentación e Interpersonales -->
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Documentación Funcional y Técnica</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Comunicación Efectiva</span>
+                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm font-medium text-gray-100 hover:bg-primary hover:text-black transition">Trabajo en Equipo</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EDUCACIÓN -->
+        <section class="bg-card p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-700">
+            <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 text-white">
+                Educación
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Ingeniería en Software - Último año</h3>
+                    <p class="text-lg text-gray-300">Universidad Autónoma de Occidente (UAdeO)</p>
+                </div>
+                <p class="text-base text-gray-400 mt-2 sm:mt-0 sm:text-right">Culiacán, Sinaloa</p>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="text-center py-6 text-gray-500 text-sm">
+            <p>&copy; 2024 Daniel Fernando Acosta Mendoza. Portafolio creado con HTML y Tailwind CSS.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
